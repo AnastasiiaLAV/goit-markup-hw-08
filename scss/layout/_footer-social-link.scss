@@ -1,0 +1,16 @@
+.footer-title {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+
+  margin-bottom: 20px;
+}
+.footer-social-list {
+  display: flex;
+  margin-right: 93px;
+}
+.footer-social-link {
+  color: var(--header-color);
+  background: rgba(255, 255, 255, 0.1);
+}

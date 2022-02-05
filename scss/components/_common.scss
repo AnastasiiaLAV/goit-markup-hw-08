@@ -1,0 +1,20 @@
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.cursor {
+  cursor: pointer;
+}
+.section {
+  padding: 94px 0;
+}
+.main__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--title-color);
+  margin-bottom: 50px;
+}
