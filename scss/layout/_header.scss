@@ -3,9 +3,12 @@
   border: 1px solid #ececec;
 }
 .header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include desk{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 }
 .site-nav {
   display: flex;
@@ -30,9 +33,24 @@
 .logo-black {
   color: var(--title-color);
 }
+// -----menu----
+.menu-link{
+  @include tab{
+display: none;
+  }
+}
+
+
+
 .site-list {
-  display: flex;
-  justify-content: center;
+  display: none;
+  @include tab{
+
+  }
+  @include desk{
+    display: flex;
+    justify-content: center;
+  }
 }
 .site-list__item {
   margin-right: 50px;
@@ -74,9 +92,15 @@
   }
 }
 .contacts {
-  display: flex;
-  justify-content: center;
-}
+  display: none;
+  @include tab{
+
+  }
+  @include desk{
+    display: flex;
+    justify-content: center;
+  }
+} 
 .contacts__item {
   margin-right: 30px;
 }

@@ -1,11 +1,9 @@
 .client-list {
-  @include mob{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: calc(-1 * var(--gap));
-    margin-left: calc(-1 * var(--gap));
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: calc(-1 * var(--gap));
+  margin-left: calc(-1 * var(--gap));
   @include tab{
     display: flex;
     flex-wrap: wrap;
@@ -22,11 +20,10 @@
   
 }
 .client-list__item {
-  @include mob{
-    flex-basis: calc(100% / 2 - var(--gap));
-    margin-top: var(--gap);
-    margin-left: var(--gap);
-  }
+  flex-basis: calc(100% / 2 - var(--gap));
+  margin-top: var(--gap);
+  margin-left: var(--gap);
+
   @include tab{
     flex-basis: calc(100% / 3 - var(--gap));
     margin-top: var(--gap);

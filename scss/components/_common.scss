@@ -8,13 +8,10 @@
   cursor: pointer;
 }
 .section {
-  @include mob{
     padding: 60px 0;
-  }
   @include desk{
     padding: 94px 0;
   }
-  
 }
 .main__title {
 color: var(--title-color);
