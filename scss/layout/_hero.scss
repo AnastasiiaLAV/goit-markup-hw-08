@@ -1,13 +1,7 @@
-.hero__container {
-  max-width: 480px;
-  padding: 118px 30px;
-  
-  @include desk{
-    max-width: 1600px;
-    padding: 200px 0;
-  }
-}
 .hero {
+  max-width: 480px;
+  padding: 118px 0;
+  margin: 0 auto;
   background-color: #2f303a;
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -15,18 +9,28 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include tab{
+    max-width: 768px;
+  }
+  @include desk{
+    max-width: 1600px;
+    padding: 200px 0;
+  }
 }
 .hero__title {
   font-weight: 900;
   font-size: 26px;
-  line-height: 1,6;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--header-color);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   margin-bottom: var(--gap);
-
   @include desk{
       font-size: 44px;
       line-height: 1.36;

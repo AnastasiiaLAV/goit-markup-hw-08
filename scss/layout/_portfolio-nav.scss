@@ -3,12 +3,24 @@
 }
 .portfolio-nav__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  @include tab{
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 .portfolio-nav__item {
   margin-right: 8px;
+  margin-bottom: 15px;
   &:last-child {
     margin-right: 0;
+  }
+  &:nth-child(n + 4){
+    margin-bottom: 0;
+  }
+  @include tab{
+    margin-bottom: 0;
   }
 }
 .portfolio-nav__btn {

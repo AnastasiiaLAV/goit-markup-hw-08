@@ -1,3 +1,6 @@
+.footer-social-section{
+  margin-bottom: 60px;
+}
 .footer-title {
   font-size: 14px;
   line-height: 16px;
@@ -5,10 +8,17 @@
   color: var(--header-color);
 
   margin-bottom: 20px;
+  text-align: center;
+  @include desk{
+  text-align: start;
+  }
 }
 .footer-social-list {
   display: flex;
-  margin-right: 93px;
+  justify-content: center;
+  @include desk{
+    margin-right: 93px;
+  }
 }
 .footer-social-link {
   color: var(--header-color);

@@ -2,12 +2,26 @@
   background: var(--footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
+
 }
 .connect {
-  display: flex;
+  @include tab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @include desk{
+    flex-wrap: nowrap;
+  }
 }
 .address {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include desk{
+    text-align: start;
+    margin-right: 70px;
+  }
 }
 .footer__logo {
   margin-bottom: 20px;
