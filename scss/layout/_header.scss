@@ -4,10 +4,10 @@
   width: 100%;
 }
 .header__container {
-  @include tab{
+  @include tab {
     display: flex;
   }
-  @include desk{
+  @include desk {
     // display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include tab{
+  @include tab {
     height: 80px;
     margin-right: 55px;
   }
@@ -32,7 +32,7 @@
 .header__logo {
   display: flex;
   justify-content: center;
-  @include tab{
+  @include tab {
     margin-right: 93px;
   }
 }
@@ -42,35 +42,9 @@
 .logo-black {
   color: var(--title-color);
 }
-// -----menu----
-.menu-link{
-  width: 44px;
-  height: 44px;
-  color: var(--title-color);
-  display: flex;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-  @include tab{
-    display: none;
-  }
-}
-.menu-link__icon {
-  fill: currentColor;
-}
-
 .site-list {
   display: none;
-  @include tab{
-    display: flex;
-    justify-content: center;
-  }
-  @include desk{
+  @include tab {
     display: flex;
     justify-content: center;
   }
@@ -116,18 +90,18 @@
 }
 .contacts {
   display: none;
-  @include tab{
+  @include tab {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
   }
-  @include desk{
+  @include desk {
     display: flex;
     justify-content: center;
   }
-} 
+}
 .contacts__item {
-  @include desk{
+  @include desk {
     margin-right: 30px;
   }
 }
@@ -161,7 +135,7 @@
   .contact__mail:focus & {
     color: var(--accent-color);
   }
-  @include desk{
+  @include desk {
     margin-right: 10px;
   }
 }
@@ -177,7 +151,7 @@
   .contact__tel:focus & {
     color: var(--accent-color);
   }
-  @include desk{
+  @include desk {
     margin-right: 10px;
   }
 }

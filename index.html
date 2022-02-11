@@ -19,11 +19,11 @@
         <nav class="site-nav">
             <a class="link logo header__logo" href="./index.html">
                 <span lang="en" class="logo-blue">Web</span><span lang="en" class="logo-black">Studio</span></a>
-                <a href="" class="link menu menu-link">
-                    <svg class="menu-link__icon" weight="40" height="40">
+                <button type="button" class="menu-open__btn" data-menu-open>
+                    <svg class="menu-open__icon" weight="40" height="40">
                         <use href="./images/icons.svg#icon-menu"></use>
                     </svg>
-                </a>
+                </button>
             <ul class="list site-list">
                 <li class="site-list__item">
                     <a class="link site-list__link line-current" href="./index.html">Студия</a>
@@ -54,6 +54,54 @@
                 </a>
             </li>
         </ul>
+    </div>
+    <div class="mob-menu is-hidden"data-menu>
+        <div class="menu-container">
+            <button type="button" class="menu-close-btn" data-menu-close>
+                <svg class="menu-icon-close" width="11" height="11">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <ul class="list menu-list">
+                <li class="menu-list__item">
+                    <a class="link menu-list__link line-current" href="./index.html">Студия</a>
+                </li>
+                <li class="menu-list__item">
+                    <a class="link menu-list__link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="menu-list__item">
+                    <a class="link menu-list__link" href="#">Контакты</a>
+                </li>
+            </ul>
+            <div class="menu-container-wrap">
+            <ul class="list menu-contacts">
+                <li class="menu-contacts__item">
+                    <a class="link menu-contact__tel" href="tel:+380991111111">
+                        +38 099 111 11 11
+                    </a>
+                </li>
+                <li class="menu-contacts__item">
+                    <a class="link menu-contact__mail" href="mailto:info@example.com">
+                        info@example.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu-social">
+                <li class="menu-social__item">
+                    <a href="#"lang="en" class="menu-social__link">Instagram</a>
+                </li>
+                <li class="menu-social__item">
+                    <a href="#"lang="en" class="menu-social__link">Twitter</a>
+                </li>
+                <li class="menu-social__item">
+                    <a href="#"lang="en" class="menu-social__link">Facebook</a>
+                </li>
+                <li class="menu-social__item">
+                    <a href="#"lang="en" class="menu-social__link">LinkedIn</a>
+                </li>
+            </ul>
+            </div>
+        </div>
     </div>
     </header>
     <main class="main">
@@ -110,19 +158,40 @@
                 <ul class="list box-list">
                     <li class="box-list__item">
                         <div class="box-list__img-wrap">
-                            <img src="./images/we-doing1.jpg" alt=" приложения для компьютера" width="370" height="294" />
+                            <picture>
+                                <source
+                                srcset="
+                                ./images/we-doing1.jpg 1x,
+                                ./images/we-doing1-2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                                <img src="./images/we-doing1.jpg" alt=" приложения для компьютера" width="370" height="294" />
+                            </picture>
                             <h3 class="box-list__title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
                         </div>
                     </li>
                     <li class="box-list__item">
                         <div class="box-list__img-wrap">
-                            <img src="./images/we-doing2.jpg" alt="приложения для телефона" width="370" height="294" />
+                            <picture>
+                                <source
+                                srcset="
+                                ./images/we-doing2.jpg 1x,
+                                ./images/we-doing2-2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                                <img src="./images/we-doing2.jpg" alt="приложения для телефона" width="370" height="294" />
+                            </picture>
                             <h3 class="box-list__title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
                         </div>
                     </li>
                     <li class="box-list__item">
                         <div class="box-list__img-wrap">
-                            <img src="./images/we-doing3.jpg" alt="дизайнерские решения" width="370" height="294" />
+                            <picture>
+                                <source
+                                srcset="
+                                ./images/we-doing3.jpg 1x,
+                                ./images/we-doing3-2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                                <img src="./images/we-doing3.jpg" alt="дизайнерские решения" width="370" height="294" />
+                            </picture>
                             <h3 class="box-list__title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
                         </div>
                     </li>
@@ -134,10 +203,14 @@
             <h2 class="main__title">Наша команда</h2>
             <ul class="list team-list">
                 <li class="team-list__item">
-                    <img src="./images/demianenco.jpg" 
-                    alt="Игорь Демьяненко"
-                    width="270"
-                    height="260"/>
+                    <picture>
+                        <source srcset="./images/demianenco.jpg 1x, ./images/demianenco-2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                        <source srcset="./images/demianenco-tab-1x.jpg 1x, ./images/demianenco-tab-2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/demianenco-mob-1x.jpg 1x, ./images/demianenco-mob-2x.jpg 2x" media="(min-width: 320px)"> 
+                        <img src="./images/demianenco.jpg" 
+                    alt="Игорь Демьяненко"/>
+                    </picture>
                     <div class="team-info">
                         <h3 class="team-info__title">Игорь Демьяненко</h3>
                         <p lang="en" class="team-info__text">Product Designer</p>
@@ -174,10 +247,12 @@
                     </div>
                 </li>
                 <li class="team-list__item">
-                    <img src="./images/repina.jpg" 
-                    alt="Ольга Репина"
-                    width="270"
-                    height="260"/>
+                    <picture>
+                        <source srcset="./images/repina.jpg 1x, ./images/repina-2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/repina-tab-1x.jpg 1x, ./images/repina-tab-2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/repina-mob-1x.jpg 1x, ./images/repina-mob-2x.jpg 2x" media="(min-width: 320px)">
+                        <img src="./images/repina.jpg" alt="Ольга Репина"/>
+                    </picture>
                     <div class="team-info">
                         <h3 class="team-info__title">Ольга Репина</h3>
                         <p lang="en" class="team-info__text">Frontend Developer</p>
@@ -214,10 +289,12 @@
                     </div>
                 </li>
                 <li class="team-list__item">
-                    <img src="./images/tarasov.jpg" 
-                    alt="Николай Тарасов"
-                    width="270"
-                    height="260"/>
+                    <picture>
+                        <source srcset="./images/tarasov.jpg 1x, ./images/tarasov-2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/tarasov-tab-1x.jpg 1x, ./images/tarasov-tab-2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/tarasov-mob-1x.jpg 1x, ./images/tarasov-mob-2x.jpg 2x" media="(min-width: 320px)">
+                        <img src="./images/tarasov.jpg" alt="Николай Тарасов"/>
+                    </picture>
                     <div class="team-info">
                         <h3 class="team-info__title">Николай Тарасов</h3>
                         <p lang="en" class="team-info__text">Marketing</p>
@@ -254,10 +331,12 @@
                     </div>
                 </li>
                 <li class="team-list__item">
-                    <img src="./images/ermacov.jpg"
-                    alt="Михаил Ермаков"
-                    width="270"
-                    height="260"/>
+                    <picture>
+                        <source srcset="./images/ermacov.jpg 1x, ./images/ermacov-2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/ermacov-tab-1x.jpg 1x, ./images/ermacov-tab-2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/ermacov-mob-1x.jpg 1x, ./images/ermacov-mob-2x.jpg 2x" media="(min-width: 320px)">
+                        <img src="./images/ermacov.jpg" alt="Михаил Ермаков"/>
+                    </picture>
                     <div class="team-info">
                         <h3 class="team-info__title">Михаил Ермаков</h3>
                         <p lang="en" class="team-info__text">UI Designer</p>
@@ -481,6 +560,7 @@
             </form>
         </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
